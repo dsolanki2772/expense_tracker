@@ -3,8 +3,28 @@ import 'package:expense_tracker/screens/ExpenseSummaryPage.dart';
 import 'package:expense_tracker/screens/ViewExpensesPage.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+import '../services/notification_service.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    startNotification();
+  }
+
+  Future<void> startNotification() async {
+    await scheduleDailyNotification();
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Daily reminder set for 8:00 PM!')),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
