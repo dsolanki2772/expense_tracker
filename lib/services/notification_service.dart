@@ -27,7 +27,7 @@ Future<void> scheduleDailyNotification() async {
     0, // Notification ID
     'Daily Reminder', // Notification Title
     'Don’t forget to record your expenses today!', // Notification Body
-    _nextInstanceOfTime(17, 15), // Time for notification (e.g., 8:00 PM)
+    _nextInstanceOfTime(20, 00), // Time for notification (e.g., 8:00 PM)
     const NotificationDetails(
       android: AndroidNotificationDetails(
         'daily_reminder_channel', // Channel ID
