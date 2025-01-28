@@ -44,7 +44,7 @@ Ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/dsolanki2772/expense_tracker.git
-   cd expense-tracker-app
+   cd expense_tracker
    ```
 
 2. Install dependencies:
